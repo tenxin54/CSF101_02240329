@@ -71,7 +71,7 @@ def palindrome():
         print("It does not consists of palindrome.")
 
 def word_counter():
-    text_reader = input("Enter the file name (with .txt extension): ")
+    text_reader = input("Give your file name here (with .txt extension): ")
     given = open(text_reader, 'r')
     txt = given.read()
     given.close()
@@ -80,10 +80,10 @@ def word_counter():
     words = txt.split()
     word_count = len(words)
     print(f"Total number of words: {word_count}")
-    word_frequencies = Counter(words)
+    word_repetition = Counter(words)
     specific_words = ["the", "and", "was"]
     for word in specific_words:
-        print(f"'{word}' occurs {word_frequencies[word]} times.")
+        print(f"'{word}' occurs {word_repetition[word]} times.")
 
 while True:
     print("select a function (1-6): \n1. Calculate the sum of prime numbers \n2. Convert length units \n3. Count consonents in string \n4. Find min and max numbers \n5. Check for palindrome \n6. Word counter \n0. Exit program ")
