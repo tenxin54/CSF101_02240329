@@ -76,7 +76,7 @@ def word_counter():
     txt = given.read()
     given.close()
     txt = txt.lower()  
-    txt = txt.translate(str.maketrans('', '', string.punctuation))
+txt = txt.translate(str.maketrans('', '', string.punctuation))  
     words = txt.split()
     word_count = len(words)
     print(f"Total number of words: {word_count}")
